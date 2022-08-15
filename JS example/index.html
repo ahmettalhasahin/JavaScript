@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>JavaScript</title>
+	<style>
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+			margin-right: 100px;
+			margin-left: 100px;
+			margin-bottom: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div> <h3 id="str">Renk değişecek mi?</h3></div>
+	<div>
+		<form action="" name="formOne">
+			<input type="text" name="isim"/>
+			<button type="submit">Submit</button>
+		</form>
+		<button id="btn" onclick="button_click(this)", onmouseover="mouseOver(this)", onmouseout="mouseOut(this)">CLICK</button>
+	</div>
+	<script>
+		document.body.style.backgroundColor = "grey";
+
+		function mouseOver(element){
+			var element = document.getElementById("str");
+			element.textContent = "Hadi tıkla!!"
+		}
+		function mouseOut(element){
+			var element = document.getElementById("str");
+			element.textContent = "Dur! Duuur! Sakın kaçmaa!"
+		}
+		function button_click(element) {
+			var element = document.getElementById("btn");
+			var degisken = document.getElementById("str");
+			
+			if (element.textContent == 'CLICK'){
+				degisken.textContent = "Gördün mü, nasıl değişti ama? Bir daha tıklasana."
+				element.innerHTML = "Clicked";
+				element.style.backgroundColor = "green";
+				document.body.style.backgroundColor = "yellow";
+			}	
+			else{
+				degisken.textContent = "Ama burada bitiyor, istersen oynayabilirsin :)"
+				element.innerHTML = "CLICK";
+				element.style.backgroundColor = "yellow";
+				document.body.style.backgroundColor = "green";
+			}
+		}
+	</script>
+</body>
+
+</html>
