@@ -1,0 +1,43 @@
+body{
+	background-color: grey;
+	color: white;
+}
+@keyframes h1{
+	from {background-color: grey;padding: 5px 20%;font-size: xx-small;}
+	to {background-color: brown; padding: 5px 10%;}
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+.head{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+h1{
+	background-color: brown;
+	border-radius: 25px;
+	padding: 5px 10%;
+	animation-name: h1;
+	animation-duration: 1.5s;
+}
+.subject-name{
+	display: flex;
+}
+h2{
+	background-color: lightskyblue;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: darkblue;
+}
+.buttons{
+	display: flex;
+	justify-content: space-between;
+}
+.button{
+	background-color: blue;
+	color: white;
+}
