@@ -111,9 +111,9 @@ The area of the triangle is 100
 */
 console.log(Math.PI)
 console.log("\n")
-								/* let base = prompt("Area of triangle", "Enter base")
-								let height = prompt("Area of triangle", "Enter height")
-								console.log(base * height * 0.5)  */
+let base = prompt("Area of triangle", "Enter base")
+let height = prompt("Area of triangle", "Enter height")
+console.log(base * height * 0.5) 
 
 //2.Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 /*
@@ -123,21 +123,21 @@ Enter side c: 3
 The perimeter of the triangle is 12
 */
 console.log("\n")
-								/* let sideA = prompt("Perimeter of triangle", "Enter side a")
-								let sideB = prompt("Perimeter of triangle", "Enter side b")
-								let sideC = prompt("Perimeter of triangle", "Enter side c")
-								console.log((sideA * 1) + (sideB * 1) + (sideC * 1)) */
+let sideA = prompt("Perimeter of triangle", "Enter side a")
+let sideB = prompt("Perimeter of triangle", "Enter side b")
+let sideC = prompt("Perimeter of triangle", "Enter side c")
+console.log((sideA * 1) + (sideB * 1) + (sideC * 1))
 
 //3.Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
 console.log("\n")
-								/* let len = prompt("Length of rectangle", "Enter length")
-								let wid = prompt("Width of rectangle", "Enter width")
-								console.log("Area = " + (len * wid) + "\n" + "Perimeter = " + (2*(len*1 + wid*1))) */
+let len = prompt("Length of rectangle", "Enter length")
+let wid = prompt("Width of rectangle", "Enter width")
+console.log("Area = " + (len * wid) + "\n" + "Perimeter = " + (2*(len*1 + wid*1)))
 
 //4.Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 console.log("\n")
-								/* let rad = prompt("Radius of circle", "Enter radius")
-								console.log("Area = " + (Math.PI * rad * rad) + "\n" + "Circumference = " + (Math.PI * rad * 2)) */
+let rad = prompt("Radius of circle", "Enter radius")
+console.log("Area = " + (Math.PI * rad * rad) + "\n" + "Circumference = " + (Math.PI * rad * 2))
 
 //5.Calculate the slope, x-intercept and y-intercept of y = 2x -2
 console.log("\n")
@@ -168,10 +168,10 @@ Enter rate per hour: 28
 Your weekly earning is 1120
 */
 console.log("\n")
-								/* let hour = prompt("Enter Hour")
-								let rate = prompt("Enter rate per hour")
-								console.log("Your weekly earning is " + hour*rate)
-								*/
+let hour = prompt("Enter Hour")
+let rate = prompt("Enter rate per hour")
+console.log("Your weekly earning is " + hour*rate)
+
 
 //10.If the length of your name is greater than 7 say, your name is long else say your name is short.
 console.log("\n")
