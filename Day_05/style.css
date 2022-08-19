@@ -1,0 +1,33 @@
+body{
+	background-color: darkslategrey;
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.name{
+	color: rgb(154, 18, 245);
+	font-size: 50px;
+	background-color: skyblue;
+	box-shadow: tomato 0px 3px 25px -3px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 300px;
+}
+.subject{
+	color: darkkhaki;
+	font-size: 25px;
+	font-weight: 900;
+}
+.buttons{
+	display: flex;
+	justify-content: space-between;
+}
+a{
+	color: springgreen;
+	text-decoration: none;
+	text-shadow: aqua 10px 10px 3px;
+}
