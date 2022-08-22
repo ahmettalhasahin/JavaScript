@@ -13,6 +13,202 @@ const countries = [
   'Kenya'
 ]
 
+const countriesList = [
+	'Afghanistan',
+	'Albania',
+	'Algeria',
+	'Andorra',
+	'Angola',
+	'Antigua and Barbuda',
+	'Argentina',
+	'Armenia',
+	'Australia',
+	'Austria',
+	'Azerbaijan',
+	'Bahamas',
+	'Bahrain',
+	'Bangladesh',
+	'Barbados',
+	'Belarus',
+	'Belgium',
+	'Belize',
+	'Benin',
+	'Bhutan',
+	'Bolivia',
+	'Bosnia and Herzegovina',
+	'Botswana',
+	'Brazil',
+	'Brunei',
+	'Bulgaria',
+	'Burkina Faso',
+	'Burundi',
+	'Cambodia',
+	'Cameroon',
+	'Canada',
+	'Cape Verde',
+	'Central African Republic',
+	'Chad',
+	'Chile',
+	'China',
+	'Colombi',
+	'Comoros',
+	'Congo (Brazzaville)',
+	'Congo',
+	'Costa Rica',
+	"Cote d'Ivoire",
+	'Croatia',
+	'Cuba',
+	'Cyprus',
+	'Czech Republic',
+	'Denmark',
+	'Djibouti',
+	'Dominica',
+	'Dominican Republic',
+	'East Timor (Timor Timur)',
+	'Ecuador',
+	'Egypt',
+	'El Salvador',
+	'Equatorial Guinea',
+	'Eritrea',
+	'Estonia',
+	'Ethiopia',
+	'Fiji',
+	'Finland',
+	'France',
+	'Gabon',
+	'Gambia, The',
+	'Georgia',
+	'Germany',
+	'Ghana',
+	'Greece',
+	'Grenada',
+	'Guatemala',
+	'Guinea',
+	'Guinea-Bissau',
+	'Guyana',
+	'Haiti',
+	'Honduras',
+	'Hungary',
+	'Iceland',
+	'India',
+	'Indonesia',
+	'Iran',
+	'Iraq',
+	'Ireland',
+	'Israel',
+	'Italy',
+	'Jamaica',
+	'Japan',
+	'Jordan',
+	'Kazakhstan',
+	'Kenya',
+	'Kiribati',
+	'Korea, North',
+	'Korea, South',
+	'Kuwait',
+	'Kyrgyzstan',
+	'Laos',
+	'Latvia',
+	'Lebanon',
+	'Lesotho',
+	'Liberia',
+	'Libya',
+	'Liechtenstein',
+	'Lithuania',
+	'Luxembourg',
+	'Macedonia',
+	'Madagascar',
+	'Malawi',
+	'Malaysia',
+	'Maldives',
+	'Mali',
+	'Malta',
+	'Marshall Islands',
+	'Mauritania',
+	'Mauritius',
+	'Mexico',
+	'Micronesia',
+	'Moldova',
+	'Monaco',
+	'Mongolia',
+	'Morocco',
+	'Mozambique',
+	'Myanmar',
+	'Namibia',
+	'Nauru',
+	'Nepal',
+	'Netherlands',
+	'New Zealand',
+	'Nicaragua',
+	'Niger',
+	'Nigeria',
+	'Norway',
+	'Oman',
+	'Pakistan',
+	'Palau',
+	'Panama',
+	'Papua New Guinea',
+	'Paraguay',
+	'Peru',
+	'Philippines',
+	'Poland',
+	'Portugal',
+	'Qatar',
+	'Romania',
+	'Russia',
+	'Rwanda',
+	'Saint Kitts and Nevis',
+	'Saint Lucia',
+	'Saint Vincent',
+	'Samoa',
+	'San Marino',
+	'Sao Tome and Principe',
+	'Saudi Arabia',
+	'Senegal',
+	'Serbia and Montenegro',
+	'Seychelles',
+	'Sierra Leone',
+	'Singapore',
+	'Slovakia',
+	'Slovenia',
+	'Solomon Islands',
+	'Somalia',
+	'South Africa',
+	'Spain',
+	'Sri Lanka',
+	'Sudan',
+	'Suriname',
+	'Swaziland',
+	'Sweden',
+	'Switzerland',
+	'Syria',
+	'Taiwan',
+	'Tajikistan',
+	'Tanzania',
+	'Thailand',
+	'Togo',
+	'Tonga',
+	'Trinidad and Tobago',
+	'Tunisia',
+	'Turkey',
+	'Turkmenistan',
+	'Tuvalu',
+	'Uganda',
+	'Ukraine',
+	'United Arab Emirates',
+	'United Kingdom',
+	'United States',
+	'Uruguay',
+	'Uzbekistan',
+	'Vanuatu',
+	'Vatican City',
+	'Venezuela',
+	'Vietnam',
+	'Yemen',
+	'Zambia',
+	'Zimbabwe'
+  ]
+
 const webTechs = [
   'HTML',
   'CSS',
@@ -332,6 +528,11 @@ for(i = 0; i < webTechs.length; i++){
 console.log(webTechsArray)
 
 //13.An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+console.log("\n")
+let mernS = ""
+for (i = 0; i < mernStack.length; i++)
+	mernS = mernS.concat(mernStack[i][0])
+console.log(mernS)
 
 //14.Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
 console.log("\n")
@@ -366,3 +567,79 @@ const fullStack = [['HTML', 'CSS', 'JS', 'React'],['Node', 'Express', 'MongoDB']
 for (i = 0; i < fullStack.length; i++)
 	for (j = 0; j < fullStack[i].length; j++)
 		console.log(fullStack[i][j].toUpperCase())
+
+//Level 3
+
+//1.Copy countries array(Avoid mutation)
+console.log("\n")
+let countriess = countries.slice()
+console.log(countriess)
+
+//2.Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+console.log("\n")
+let sortedCountries = countriess.slice()
+sortedCountries.sort()
+console.log(sortedCountries)
+
+//3.Sort the webTechs array and mernStack array
+console.log("\n")
+let sortedWebTechs = webTechs.slice()
+sortedWebTechs.sort()
+let sortedMernStack = mernStack.slice()
+sortedMernStack.sort()
+console.log(sortedWebTechs)
+console.log(sortedMernStack)
+
+//4.Extract all the countries contain the word 'land' from the countries array and print it as array
+console.log("\n")
+const withoutLand = []
+for (i = 0; i < countries.length; i++){
+	if(!(countries[i].includes("land")))
+		withoutLand.push(countries[i])
+}
+console.log(withoutLand)
+
+//5.Find the country containing the hightest number of characters in the countries array
+console.log("\n")
+j = 0
+for (i = 0; i < countriesList.length; i++){
+	if (countriesList[j].length < countriesList[i].length)
+		j = i
+}
+console.log(countriesList[j])
+
+//6.Extract all the countries contain the word 'land' from the countries array and print it as array
+console.log("\n")
+const withoutCountriesLand = []
+for (i = 0; i < countriesList.length; i++){
+	if(!(countriesList[i].includes("land")))
+		withoutCountriesLand.push(countriesList[i])
+}
+console.log(withoutCountriesLand)
+
+//7.Extract all the countries containing only four characters from the countries array and print it as array
+console.log("\n")
+let withoutFourCharacters = []
+for (i = 0; i < countriesList.length; i++){
+	if (countriesList[i].length != 4)
+		withoutFourCharacters.push(countriesList[i])
+}
+console.log(withoutFourCharacters)
+
+//8.Extract all the countries containing two or more words from the countries array and print it as array
+console.log("\n")
+let withoutMoreWords = []
+for (i = 0; i < countriesList.length; i++){
+	if (!(countriesList[i].includes(" ")))
+		withoutMoreWords.push(countriesList[i])
+}
+console.log(withoutMoreWords)
+
+//9.Reverse the countries array and capitalize each country and stored it as an array
+console.log("\n")
+let reverseCountries = []
+for (i = 0; i < countriesList.length; i++){
+	reverseCountries.push(countriesList[i].toUpperCase())
+}
+reverseCountries.reverse()
+console.log(reverseCountries)
