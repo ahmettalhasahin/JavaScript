@@ -150,3 +150,201 @@ console.log(findMax(384 , 45, 4))
 //Level 2
 
 //1.Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+n()
+const solveLinEquation = (a, b, c) => {
+/* 	let gcd = 1
+	for (i = 1; a % i == 0 && b % i == 0; i++)
+		gcd *= i */
+	for (let x = 0; a * x <= c; x++){
+		if ((c - (a * x)) % b == 0){
+			return ("x: " + x + ", y: " + ((c - (a * x)) / b))
+		}
+	}
+}
+console.log(solveLinEquation(-3,-13,10))
+
+//2.Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+n()
+const solveQuadEquation = (a, b, c) => {
+	if (a != 0){
+		let x1 = -((b - Math.sqrt(b ** 2 - (4 * a * c))) / (2 * a))
+		let x2 = -((b + Math.sqrt(b ** 2 - (4 * a * c))) / (2 * a))
+		return ("x1 = "+x1+", x2 = "+x2)
+	}
+}
+console.log(solveQuadEquation(1, 7, 12))
+
+//3.Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+n()
+const printArray = (arr) => {
+	for (parameter of arr){
+		console.log(parameter)
+	}
+}
+printArray([2,"dfg",3,4,5,6,"string"])
+
+//4.Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+n()
+const showDateTime = () => {
+	let now = new Date()
+	const zero = (a) => {
+		if (a < 10)
+			return(0)
+		else
+			return("")
+	}
+	console.log(`${zero(now.getDate())}`+now.getDate()+"/"+`${zero(now.getMonth())}`+now.getMonth()+"/"+now.getFullYear()+" "+`${zero(now.getHours())}`+now.getHours()+":"+`${zero(now.getMinutes())}`+now.getMinutes())
+}
+showDateTime()
+
+//5.Declare a function name swapValues. This function swaps value of x to y.
+n()
+const swapValues = (x, y) =>console.log("x => "+y+", "+"y => "+x)
+swapValues(3,4)
+
+//6.Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+/*
+console.log(reverseArray([1, 2, 3, 4, 5]))
+//[5, 4, 3, 2, 1]
+console.log(reverseArray(['A', 'B', 'C']))
+//['C', 'B', 'A']
+*/
+n()
+const reverseArray = (array) =>{
+	let revArray = []
+	for (let len = array.length - 1; len >= 0; len--){
+		revArray.push(array[len])
+	}
+	return revArray
+}
+console.log(reverseArray([5, 4, 3, 2, 1]))
+
+//7.Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+n()
+const capitalizeArray = (array) => {
+	let capitalizedarray = []
+	for (element of array){
+		capitalizedarray.push(element.toUpperCase())
+	}
+	return capitalizedarray
+}
+console.log(capitalizeArray(["apple", "banana", "cherry"]))
+
+//8.Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+n()
+const addItem = (str) => {
+	let array = ["apple"]
+	array.push(str)
+	return array
+}
+console.log(addItem("peach"))
+
+//9.Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+n()
+const removeItem = (index) => {
+	let array = [1, 3, 5, 7, 9, 11, 13]
+	array.splice(index,1)
+	return array
+}
+console.log(removeItem(3))
+
+//10.Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+const sumOfNumbers = (x, y) => {
+	let sum = 0
+	for (i = x; i < y; i++)
+		sum += i
+	return sum
+}
+console.log(sumOfNumbers(7,15))
+
+//11.Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+n()
+const sumOfOdds = (x, y) => {
+	let sum = 0
+	if (x % 2 == 0)
+		for (i = x + 1; i < y; i += 2)
+			sum += i
+	else
+		for (i = x; i < y; i+= 2)
+			sum += i
+	return sum
+}
+console.log(sumOfOdds(5,8))
+console.log(sumOfOdds(6,8))
+
+//12.Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+n()
+const sumOfEven = (x, y) => {
+	let sum = 0
+	if (x % 2 == 1)
+		for (i = x + 1; i < y; i += 2)
+			sum += i
+	else
+		for (i = x; i < y; i+= 2)
+			sum += i
+	return sum
+}
+console.log(sumOfEven(5,8))
+console.log(sumOfEven(4,8))
+
+//13.Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+n()
+const evensAndOdds = (int) => {
+	if (int % 2 == 0)
+		return (`The number of odds are ${int/2}.${n()} The number of evens are ${(int/2) + 1}.`)
+	else
+		return (`The number of odds are ${(int+1)/2}. The number of evens are ${((int+1)/2)}.`)
+}
+console.log(evensAndOdds(101))
+
+//14.Write a function which takes any number of arguments and return the sum of the arguments
+n()
+const sumOfArguments = (...arg) => {
+	let sum = 0
+	for (element of arg){
+		sum += element
+	}
+	return sum
+}
+console.log(sumOfArguments(1,2,3,4,5,6))
+
+//15.Write a function which generates a randomUserIp.
+n()
+const randomUserIp = () => console.log(parseInt(Math.floor((Math.random().toString(10)) * 256))+"."+parseInt(Math.floor((Math.random().toString(10)) * 256))+"."+parseInt(Math.floor((Math.random().toString(10)) * 256))+"."+parseInt(Math.floor((Math.random().toString(10)) * 256)))
+
+randomUserIp()
+
+//16.Write a function which generates a randomMacAddress
+n()
+const randomMacAddress = () =>
+{
+	const zero = (num) => {
+		if (num < 16)
+			return (0)
+		else
+			return ""
+	}
+	let one = parseInt(Math.floor(Math.random() * 256))
+	let two = parseInt(Math.floor(Math.random() * 256))
+	let three = parseInt(Math.floor(Math.random() * 256))
+	let four = parseInt(Math.floor(Math.random() * 256))
+	let five = parseInt(Math.floor(Math.random() * 256))
+	let six = parseInt(Math.floor(Math.random() * 256))
+	let mac = `${zero(one)}${one.toString(16).toUpperCase()}:${zero(two)}${two.toString(16).toUpperCase()}:${zero(three)}${three.toString(16).toUpperCase()}:${zero(four)}${four.toString(16).toUpperCase()}:${zero(five)}${five.toString(16).toUpperCase()}:${zero(six)}${six.toString(16).toUpperCase()}`
+	console.log(mac)
+}
+randomMacAddress()
+
+//17.Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+n()
+const randomHexaNumberGenerator = () => {
+	return (`'#${parseInt(Math.random() * (16 ** 6)).toString(16)}'`)
+}
+console.log(randomHexaNumberGenerator())
+
+//18.Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+n()
+const userIdGenerator = () => {
+	return (parseInt(Math.floor(Math.random() * (36 ** 7))).toString(36).toUpperCase())
+}
+console.log(userIdGenerator())
