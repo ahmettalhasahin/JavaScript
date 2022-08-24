@@ -368,18 +368,18 @@ dIV0SSUTgAdKwStr
 '
 */
 n()
-															/* const userIdGeneratedByUser = () => {
-																let a = prompt("Number of characters")
-																let b = prompt("Number of IDs")
-																let str = "'"
-																for(i = 0; i < b; i++){
-																	str = str.concat(parseInt(Math.floor(Math.random() * (36 ** a))).toString(36).toUpperCase())
-																	str = str.concat('\n');
-																}
-																str = str.concat("'")
-																console.log(str);
-															}
-															userIdGeneratedByUser() */
+const userIdGeneratedByUser = () => {
+	let a = prompt("Number of characters")
+	let b = prompt("Number of IDs")
+	let str = "'"
+	for (i = 0; i < b; i++) {
+		str = str.concat(parseInt(Math.floor(Math.random() * (36 ** a))).toString(36).toUpperCase())
+		str = str.concat('\n');
+	}
+	str = str.concat("'")
+	console.log(str);
+}
+userIdGeneratedByUser()
 
 //2.Write a function name rgbColorGenerator and it generates rgb colors.
 /*
@@ -426,20 +426,20 @@ arrayOfRgbColors()
 //5.Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
 n()
 const convertHexaToRgb = (hexcolor) => {
-	let first = hexcolor.slice(1,3)
-	let second = hexcolor.slice(3,5)
-	let third = hexcolor.slice(5,7)
-	console.log(`rgb(${parseInt(first, 16)},${parseInt(second,16)},${parseInt(third,16)})`)
+	let first = hexcolor.slice(1, 3)
+	let second = hexcolor.slice(3, 5)
+	let third = hexcolor.slice(5, 7)
+	console.log(`rgb(${parseInt(first, 16)},${parseInt(second, 16)},${parseInt(third, 16)})`)
 }
 convertHexaToRgb("#97d57c")
 
 //6.Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
 n()
-const convertRgbToHexa = (rgb) =>{
+const convertRgbToHexa = (rgb) => {
 	let array = []
 	let hex = "#"
 	array = (rgb.match(/\d+/g))
-	for (i = 0; i < 3; i++){
+	for (i = 0; i < 3; i++) {
 		if (parseInt(array[i]) < 16)
 			hex = hex.concat("0")
 		hex = hex.concat(parseInt(array[i]).toString(16))
@@ -458,33 +458,33 @@ console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
 n()
 const generateColors = (type, count) => {
 	let array = []
-	if (type == 'hexa'){
+	if (type == 'hexa') {
 		const zero = (n) => {
 			if (n < 16)
 				return 0
 			else
 				return ("")
 		}
-		for (;count > 0;count--) {
+		for (; count > 0; count--) {
 			let r = (Math.floor(Math.random() * 256)).toString(16)
 			let g = (Math.floor(Math.random() * 256)).toString(16)
 			let b = (Math.floor(Math.random() * 256)).toString(16)
 			array.push(`#${zero(r)}${r}${zero(g)}${g}${zero(b)}${b}`)
 		}
 	}
-	else if (type == 'rgb'){
-		for (;count > 0;count--){
+	else if (type == 'rgb') {
+		for (; count > 0; count--) {
 			array.push(`rgb(${(Math.floor(Math.random() * 256)).toString(10)},${(Math.floor(Math.random() * 256)).toString(10)},${(Math.floor(Math.random() * 256)).toString(10)})`)
 		}
 	}
 	console.log(array)
 }
-generateColors("rgb",5)
+generateColors("rgb", 5)
 
 //8.Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
 n()
 const shuffleArray = (array) => {
-	
+
 }
 shuffleArray(["banana", "apple", "strawberry", "cherry", "peach"])
 //9.Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
